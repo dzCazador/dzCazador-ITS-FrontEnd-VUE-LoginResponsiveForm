@@ -6,10 +6,11 @@ const user = reactive<User>({
   login: '',
   password: ''
 })
+
 </script>
 
 <template>
-  <div class="form signin-form">
+  <div class="form signin-form" >
     <form>
       <h3>Ingresar</h3>
       <input type="text" placeholder="mail@mail.com" v-model="user.login" />

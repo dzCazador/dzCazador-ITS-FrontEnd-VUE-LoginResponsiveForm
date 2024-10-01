@@ -7,10 +7,19 @@ const register = reactive<Register>({
   password: '',
   passwordConfirm: ''
 })
-</script>
 
+const handleSubmit = () => {
+    //print register data to console
+  console.log(register)
+  // clean the form data
+  register.email = ''
+  register.password = ''
+  register.passwordConfirm = ''
+}
+
+</script>
 <template>
-  <div class="form signup-form">
+  <div class="form signup-form" @submit.prevent="handleSubmit">
     <form id="register-form">
       <h3>Registrarse</h3>
       <label for="email">Email</label>
@@ -44,5 +53,4 @@ const register = reactive<Register>({
 </template>
 
 <style scoped>
-/* Estilos específicos para el formulario de registro */
 </style>
